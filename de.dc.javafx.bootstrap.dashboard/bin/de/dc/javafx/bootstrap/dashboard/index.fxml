@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/index.css" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="800.0" prefWidth="299.0" spacing="5.0" styleClass="navigation" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="67.0" prefWidth="299.0" text="SB ADMIN 2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.68" prefWidth="200.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox spacing="10.0">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="TACHOMETER" size="20" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator opacity="0.52" prefHeight="1.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <Label text="INTERFACES" textFill="#bfbfbf">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox spacing="10.0">
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="COGS" size="20" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Components" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="WRENCH" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Ultilities" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator opacity="0.52" prefHeight="1.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <Label text="ADDONS" textFill="#bfbfbf">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox spacing="10.0">
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="FOLDER" size="20" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Pages" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="CHART_LINE" size="20" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Charts" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <FontAwesomeIconView fill="#bfbfbf" glyphName="TABLE" size="20" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Tables" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator opacity="0.52" prefHeight="1.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="70.0" prefWidth="901.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.12" radius="3.03" width="0.0" />
+               </effect>
+               <children>
+                  <TextField prefHeight="34.0" prefWidth="288.0" promptText="Search for...">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #3E64D3;">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="16" />
+                     </graphic>
+                  </Button>
+                  <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <FontAwesomeIconView fill="#b2b2b2" glyphName="BELL" size="28">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="#b2b2b2" glyphName="ENVELOPE" size="28">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Separator orientation="VERTICAL">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Max Mustermann">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="10.0" right="30.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@image/photo-1520719627573-5e2c1a6610f0.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
