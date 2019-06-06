@@ -1,16 +1,16 @@
 package de.dc.javafx.bootstrap.dashboard.controller;
 
-import de.dc.javafx.bootstrap.dashboard.controller.BaseLoginController;
+import de.dc.javafx.bootstrap.dashboard.controller.BaseRegisterController;
 import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
-public class LoginPage extends BaseLoginController {
-  public LoginPage() {
+public class RegisterPage extends BaseRegisterController {
+  public RegisterPage() {
     try {
-      URL _resource = this.getClass().getResource("/de/dc/javafx/bootstrap/dashboard/login.fxml");
+      URL _resource = this.getClass().getResource("/de/dc/javafx/bootstrap/dashboard/register.fxml");
       final FXMLLoader fxmlLoader = new FXMLLoader(_resource);
       fxmlLoader.setRoot(this);
       fxmlLoader.setController(this);
@@ -21,8 +21,7 @@ public class LoginPage extends BaseLoginController {
   }
   
   @Override
-  protected void onCreateANewAccountLinkAction(final ActionEvent event) {
-    this.root.toBack();
+  protected void onAlreadyHaveAnAccountLinkAction(final ActionEvent event) {
   }
   
   @Override
@@ -30,14 +29,14 @@ public class LoginPage extends BaseLoginController {
   }
   
   @Override
-  protected void onLoginButtonAction(final ActionEvent event) {
+  protected void onRegisterButtonAction(final ActionEvent event) {
   }
   
   @Override
-  protected void onLoginWithFacebookButtonAction(final ActionEvent event) {
+  protected void onRegisterWithGoogleButtonAction(final ActionEvent event) {
   }
   
   @Override
-  protected void onLoginWithGoogleButtonAction(final ActionEvent event) {
+  protected void onRegisterithFacebookButtonAction(final ActionEvent event) {
   }
 }

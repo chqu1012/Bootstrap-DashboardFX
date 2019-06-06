@@ -12,7 +12,8 @@ class LoginPage extends BaseLoginController {
         fxmlLoader.load()
 	}
 	
-	override protected void onCreateANewAccountLinkAction(ActionEvent event) { // TODO Auto-generated method stub
+	override protected void onCreateANewAccountLinkAction(ActionEvent event) {
+		root.toBack
 	}
 
 	override protected void onForgotPasswordLinkAction(ActionEvent event) { // TODO Auto-generated method stub
