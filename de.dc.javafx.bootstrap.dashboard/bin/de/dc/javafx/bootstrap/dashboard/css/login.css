@@ -1,0 +1,43 @@
+.border-pane{
+	-fx-background-color: #3B62D1;
+}
+
+.main-content{
+	-fx-background-color: white;
+	-fx-background-radius: 10;
+}
+
+.round-textfield{
+    -fx-background-color: white;
+    -fx-border-color : #D7D6DC;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+}
+
+.round-textfield:focused {
+    -fx-border-color : #D7D6DC;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+} 
+
+.round-button-blue{
+	-fx-background-color: #2E59D9;
+	-fx-text-fill: white;
+	-fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.round-button-darkblue{
+	-fx-background-color: #30497C;
+	-fx-text-fill: white;
+	-fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.round-button-red{
+	-fx-background-color: #E12717;
+	-fx-text-fill: white;
+	-fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
