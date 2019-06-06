@@ -16,12 +16,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@css/login.css" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <HBox maxHeight="500.0" maxWidth="800.0" styleClass="main-content" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="370.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+            <ImageView fx:id="profile" fitHeight="600.0" fitWidth="370.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
                   <Image url="@image/profile.jpg" />
                </image>
@@ -39,7 +38,7 @@
                         <Insets top="50.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="40.0" promptText="Enter Email Address..." styleClass="round-textfield">
+                  <TextField fx:id="emailText" prefHeight="40.0" promptText="Enter Email Address..." styleClass="round-textfield">
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
@@ -47,7 +46,7 @@
                         <Insets left="20.0" />
                      </padding>
                   </TextField>
-                  <PasswordField prefHeight="40.0" promptText="Password" styleClass="round-textfield">
+                  <PasswordField fx:id="passwordText" prefHeight="40.0" promptText="Password" styleClass="round-textfield">
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
@@ -55,12 +54,12 @@
                         <Insets left="20.0" />
                      </padding>
                   </PasswordField>
-                  <CheckBox mnemonicParsing="false" text="Remember me">
+                  <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="Remember me">
                      <VBox.margin>
                         <Insets left="25.0" />
                      </VBox.margin>
                   </CheckBox>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-blue" text="Login">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-blue" text="Login">
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
@@ -73,7 +72,7 @@
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
                   </Separator>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-red" text="Login with Google">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithGoogleButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-red" text="Login with Google">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -84,7 +83,7 @@
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-darkblue" text="Login with Facebook">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithFacebookButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-darkblue" text="Login with Facebook">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -100,12 +99,12 @@
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
                   </Separator>
-                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" text="Forgot Password?">
+                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onForgotPasswordLinkAction" text="Forgot Password?">
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
                   </Hyperlink>
-                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" text="Create a new Account">
+                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onCreateANewAccountLinkAction" text="Create a new Account">
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
@@ -118,4 +117,4 @@
          </effect>
       </HBox>
    </center>
-</BorderPane>
+</fx:root>
