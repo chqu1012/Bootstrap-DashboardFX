@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
-public abstract class BaseRegisterController extends BorderPane{
+public abstract class BaseRegisterController{
 
     @FXML
     protected BorderPane root;

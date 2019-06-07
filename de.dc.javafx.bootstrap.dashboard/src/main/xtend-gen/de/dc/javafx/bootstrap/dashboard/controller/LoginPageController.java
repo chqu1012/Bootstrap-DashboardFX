@@ -1,28 +1,15 @@
 package de.dc.javafx.bootstrap.dashboard.controller;
 
 import de.dc.javafx.bootstrap.dashboard.controller.BaseLoginController;
-import java.net.URL;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.springframework.stereotype.Controller;
 
+@Controller
 @SuppressWarnings("all")
-public class LoginPage extends BaseLoginController {
-  public LoginPage() {
-    try {
-      URL _resource = this.getClass().getResource("/de/dc/javafx/bootstrap/dashboard/login.fxml");
-      final FXMLLoader fxmlLoader = new FXMLLoader(_resource);
-      fxmlLoader.setRoot(this);
-      fxmlLoader.setController(this);
-      fxmlLoader.<Object>load();
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
-  }
-  
+public class LoginPageController extends BaseLoginController {
   @Override
   protected void onCreateANewAccountLinkAction(final ActionEvent event) {
-    this.root.toBack();
+    this.registerPane.toFront();
   }
   
   @Override
@@ -31,7 +18,7 @@ public class LoginPage extends BaseLoginController {
   
   @Override
   protected void onLoginButtonAction(final ActionEvent event) {
-    this.root.toBack();
+    this.indexPane.toFront();
   }
   
   @Override

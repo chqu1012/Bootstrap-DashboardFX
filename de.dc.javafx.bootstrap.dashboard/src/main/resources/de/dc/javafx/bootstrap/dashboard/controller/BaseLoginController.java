@@ -7,8 +7,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
-public abstract class BaseLoginController extends BorderPane{
+public abstract class BaseLoginController{
 
+	@FXML
+	protected BorderPane registerPane;
+
+	@FXML
+	protected BorderPane indexPane;
+	
     @FXML
     protected BorderPane root;
 

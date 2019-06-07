@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/index.css" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/index.css" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dc.javafx.bootstrap.dashboard.controller.IndexPageController">
    <left>
       <VBox prefHeight="800.0" prefWidth="299.0" spacing="5.0" styleClass="navigation" BorderPane.alignment="CENTER">
          <children>
@@ -193,4 +193,4 @@
          </top>
       </BorderPane>
    </center>
-</fx:root>
+</BorderPane>

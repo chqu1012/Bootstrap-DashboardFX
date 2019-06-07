@@ -1,26 +1,20 @@
 package de.dc.javafx.bootstrap.dashboard.controller
 
 import javafx.event.ActionEvent
-import javafx.fxml.FXMLLoader
+import org.springframework.stereotype.Controller
 
-class LoginPage extends BaseLoginController {
-	
-	new() {
-		val fxmlLoader = new FXMLLoader(class.getResource("/de/dc/javafx/bootstrap/dashboard/login.fxml"))
-        fxmlLoader.setRoot(this)
-        fxmlLoader.setController(this)
-        fxmlLoader.load()
-	}
+@Controller
+class LoginPageController extends BaseLoginController {
 	
 	override protected void onCreateANewAccountLinkAction(ActionEvent event) {
-		root.toBack
+		registerPane.toFront
 	}
 
 	override protected void onForgotPasswordLinkAction(ActionEvent event) { 
 	}
 
 	override protected void onLoginButtonAction(ActionEvent event) {
-		root.toBack
+		indexPane.toFront
 	}
 
 	override protected void onLoginWithFacebookButtonAction(ActionEvent event) { // TODO Auto-generated method stub

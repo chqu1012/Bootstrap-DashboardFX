@@ -1,16 +1,10 @@
 package de.dc.javafx.bootstrap.dashboard.controller
 
 import javafx.event.ActionEvent
-import javafx.fxml.FXMLLoader
+import org.springframework.stereotype.Controller
 
-class RegisterPage extends BaseRegisterController {
-	
-	new() {
-		val fxmlLoader = new FXMLLoader(class.getResource("/de/dc/javafx/bootstrap/dashboard/register.fxml"))
-        fxmlLoader.setRoot(this)
-        fxmlLoader.setController(this)
-        fxmlLoader.load()
-	}
+@Controller
+class RegisterPageController extends BaseRegisterController {
 	
 	override protected void onAlreadyHaveAnAccountLinkAction(ActionEvent event) { // TODO Auto-generated method stub
 	}

@@ -11,110 +11,118 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@css/login.css" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <HBox maxHeight="500.0" maxWidth="800.0" styleClass="main-content" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="profile" fitHeight="600.0" fitWidth="370.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
-               <image>
-                  <Image url="@image/profile.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" top="10.0" />
-               </HBox.margin>
-            </ImageView>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" HBox.hgrow="ALWAYS">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dc.javafx.bootstrap.dashboard.controller.LoginPageController">
+   <children>
+      <fx:include fx:id="registerPane" source="register.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+      <fx:include fx:id="indexPane" source="index.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+      <BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@css/login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <HBox maxHeight="500.0" maxWidth="800.0" styleClass="main-content" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Welcome Back!">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="50.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextField fx:id="emailText" prefHeight="40.0" promptText="Enter Email Address..." styleClass="round-textfield">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </TextField>
-                  <PasswordField fx:id="passwordText" prefHeight="40.0" promptText="Password" styleClass="round-textfield">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </PasswordField>
-                  <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="Remember me">
-                     <VBox.margin>
-                        <Insets left="25.0" />
-                     </VBox.margin>
-                  </CheckBox>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-blue" text="Login">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Separator prefWidth="200.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </Separator>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithGoogleButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-red" text="Login with Google">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                  </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithFacebookButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-darkblue" text="Login with Facebook">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Separator prefWidth="200.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </Separator>
-                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onForgotPasswordLinkAction" text="Forgot Password?">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </Hyperlink>
-                  <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onCreateANewAccountLinkAction" text="Create a new Account">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </Hyperlink>
+                  <ImageView fx:id="profile" fitHeight="600.0" fitWidth="370.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@image/profile.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Welcome Back!">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="emailText" prefHeight="40.0" promptText="Enter Email Address..." styleClass="round-textfield">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </TextField>
+                        <PasswordField fx:id="passwordText" prefHeight="40.0" promptText="Password" styleClass="round-textfield">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </PasswordField>
+                        <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="Remember me">
+                           <VBox.margin>
+                              <Insets left="25.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-blue" text="Login">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithGoogleButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-red" text="Login with Google">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginWithFacebookButtonAction" prefHeight="34.0" prefWidth="380.0" styleClass="round-button-darkblue" text="Login with Facebook">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onForgotPasswordLinkAction" text="Forgot Password?">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onCreateANewAccountLinkAction" text="Create a new Account">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Hyperlink>
+                     </children>
+                  </VBox>
                </children>
-            </VBox>
-         </children>
-         <effect>
-            <DropShadow height="12.1" radius="4.0675" width="6.17" />
-         </effect>
-      </HBox>
-   </center>
-</fx:root>
+               <effect>
+                  <DropShadow height="12.1" radius="4.0675" width="6.17" />
+               </effect>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

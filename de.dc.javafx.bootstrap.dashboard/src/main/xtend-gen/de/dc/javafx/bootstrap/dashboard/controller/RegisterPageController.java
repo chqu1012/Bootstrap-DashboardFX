@@ -1,25 +1,12 @@
 package de.dc.javafx.bootstrap.dashboard.controller;
 
 import de.dc.javafx.bootstrap.dashboard.controller.BaseRegisterController;
-import java.net.URL;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.springframework.stereotype.Controller;
 
+@Controller
 @SuppressWarnings("all")
-public class RegisterPage extends BaseRegisterController {
-  public RegisterPage() {
-    try {
-      URL _resource = this.getClass().getResource("/de/dc/javafx/bootstrap/dashboard/register.fxml");
-      final FXMLLoader fxmlLoader = new FXMLLoader(_resource);
-      fxmlLoader.setRoot(this);
-      fxmlLoader.setController(this);
-      fxmlLoader.<Object>load();
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
-  }
-  
+public class RegisterPageController extends BaseRegisterController {
   @Override
   protected void onAlreadyHaveAnAccountLinkAction(final ActionEvent event) {
   }
