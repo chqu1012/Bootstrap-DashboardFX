@@ -2,13 +2,11 @@ package de.dc.javafx.bootstrap.dashboard.controller;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 public abstract class BaseIndexController{
-
-    @FXML
-    protected Label title;
 
     @FXML
     protected TextField searchText;
@@ -24,5 +22,11 @@ public abstract class BaseIndexController{
 
     @FXML
     protected ImageView profileImageView;
+
+    @FXML
+    protected Label title;
+
+    @FXML
+    protected ListView<String> navigationListView;
 
 }
