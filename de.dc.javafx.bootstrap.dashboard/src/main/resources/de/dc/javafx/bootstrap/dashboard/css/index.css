@@ -1,3 +1,10 @@
 .navigation{
 	-fx-background-color: #3E64D3;
 }
+
+.list-cell {
+    -fx-background-color: transparent;
+}
+.list-view {
+    -fx-background-color: transparent;
+}
