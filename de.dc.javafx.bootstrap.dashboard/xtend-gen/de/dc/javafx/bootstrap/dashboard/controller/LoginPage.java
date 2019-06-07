@@ -31,6 +31,7 @@ public class LoginPage extends BaseLoginController {
   
   @Override
   protected void onLoginButtonAction(final ActionEvent event) {
+    this.root.toBack();
   }
   
   @Override

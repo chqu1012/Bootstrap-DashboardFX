@@ -6,12 +6,14 @@ import javafx.scene.Scene
 import javafx.stage.Stage
 import javafx.scene.layout.StackPane
 import de.dc.javafx.bootstrap.dashboard.controller.RegisterPage
+import de.dc.javafx.bootstrap.dashboard.controller.IndexPage
 
 class Dashboard extends Application {
 	
 	override start(Stage stage) throws Exception {
 		val pane = new StackPane
 		pane.children += new RegisterPage
+		pane.children += new IndexPage
 		pane.children += new LoginPage
 		stage.setScene(new Scene(pane, 1200, 700))
 		stage.show

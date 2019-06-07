@@ -16,10 +16,11 @@ class LoginPage extends BaseLoginController {
 		root.toBack
 	}
 
-	override protected void onForgotPasswordLinkAction(ActionEvent event) { // TODO Auto-generated method stub
+	override protected void onForgotPasswordLinkAction(ActionEvent event) { 
 	}
 
-	override protected void onLoginButtonAction(ActionEvent event) { // TODO Auto-generated method stub
+	override protected void onLoginButtonAction(ActionEvent event) {
+		root.toBack
 	}
 
 	override protected void onLoginWithFacebookButtonAction(ActionEvent event) { // TODO Auto-generated method stub

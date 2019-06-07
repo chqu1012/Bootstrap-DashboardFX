@@ -14,12 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/index.css" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/index.css" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox prefHeight="800.0" prefWidth="299.0" spacing="5.0" styleClass="navigation" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="67.0" prefWidth="299.0" text="SB ADMIN 2" textFill="WHITE">
+            <Label fx:id="title" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="67.0" prefWidth="299.0" text="SB ADMIN 2" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -140,14 +139,14 @@
       </VBox>
    </left>
    <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <top>
             <HBox prefHeight="70.0" prefWidth="901.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <effect>
                   <DropShadow blurType="TWO_PASS_BOX" height="14.12" radius="3.03" width="0.0" />
                </effect>
                <children>
-                  <TextField prefHeight="34.0" prefWidth="288.0" promptText="Search for...">
+                  <TextField fx:id="searchText" prefHeight="34.0" prefWidth="288.0" promptText="Search for...">
                      <HBox.margin>
                         <Insets bottom="20.0" left="20.0" top="20.0" />
                      </HBox.margin>
@@ -161,12 +160,12 @@
                      </graphic>
                   </Button>
                   <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
-                  <FontAwesomeIconView fill="#b2b2b2" glyphName="BELL" size="28">
+                  <FontAwesomeIconView fx:id="alarmImageView" fill="#b2b2b2" glyphName="BELL" size="28">
                      <HBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </HBox.margin>
                   </FontAwesomeIconView>
-                  <FontAwesomeIconView fill="#b2b2b2" glyphName="ENVELOPE" size="28">
+                  <FontAwesomeIconView fx:id="mailNotificationImageView" fill="#b2b2b2" glyphName="ENVELOPE" size="28">
                      <HBox.margin>
                         <Insets bottom="20.0" left="20.0" top="20.0" />
                      </HBox.margin>
@@ -176,12 +175,12 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Separator>
-                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Max Mustermann">
+                  <Label fx:id="profileLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Max Mustermann">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true">
+                  <ImageView fx:id="profileImageView" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true">
                      <HBox.margin>
                         <Insets bottom="20.0" left="10.0" right="30.0" top="20.0" />
                      </HBox.margin>
@@ -194,4 +193,4 @@
          </top>
       </BorderPane>
    </center>
-</BorderPane>
+</fx:root>
