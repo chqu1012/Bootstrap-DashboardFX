@@ -1,4 +1,5 @@
 package de.dc.javafx.bootstrap.dashboard.controller;
+import de.dc.javafx.bootstrap.dashboard.controller.index.model.NavigationItem;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -27,6 +28,6 @@ public abstract class BaseIndexController{
     protected Label title;
 
     @FXML
-    protected ListView<String> navigationListView;
+    protected ListView<NavigationItem> navigationListView;
 
 }
